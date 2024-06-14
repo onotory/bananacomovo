@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.sidebar{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover{
+    color: red;
+}
+
+.sidebar #closebtn{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn{
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgb(245, 0, 0);
+}
+
+.openbtn:hover{
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    color:white;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, red, black);
+    padding: 10px;
+}
+
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: #ffffff;
+    margin: 100px auto 20px;
+    padding: 40px 30px;
+    border-radius: 10px;
+}
+
+.todo-app h2{
+    color: black;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.todo-app h2 img{
+    width: 30px;
+    margin-right: 180px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: lightgray ;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+} input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+.saveButton{
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10%;
+    background-color: red;
+    float: right;
+}
+
+.saveButton:hover{
+    background-color: black;
+    color: white;
+}
+
+.addButton{
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 100%;
+    background-color: red;
+}
+
+.addButton:hover{
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 100%;
+    background-color: black;
+    color:white;
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before{
+    content:'';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked{
+    color:#555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(images/checked.png);
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background: #edeef0;
+}

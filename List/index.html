@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lista de Tarefas </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" id="closebtn" onclick="CloseNav()">&times;</a>
+        <a href="#">Início</a>
+        <a href="#">Configurações</a>
+    </div>
+    <div id="main">
+        <button class="openbtn" onclick="openNav(Boolean=true)">☰ Abrir Menu </button>
+    </div>
+        <div class="container">
+            <div class="todo-app">
+                <h2>Lista de Tarefas <img src="images/icon.png"><button class="saveButton">Salvar </button></h2>
+                    <div class="row">
+                        <input type="text" id="input-box" placeholder="Digite sua tarefa aqui!">
+                        <button class="addButton"onclick="addTask()">+</button>
+                    </div>
+        <ul id="list-container">
+        </ul>
+        </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
