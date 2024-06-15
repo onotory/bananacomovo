@@ -1,7 +1,10 @@
+    /* Declaração de constantes */
+
 const inputBox = document.getElementById("input-box")
 const listContainer = document.getElementById("list-container")
 const task = inputBox.value;
 
+    /* Botão adicionar tarefas*/
 
 function addTask(){
     if(inputBox.value === ''){
@@ -47,39 +50,17 @@ document.addEventListener('DOMContentLoaded', (Event) => {
     }
 })
 
-window.saveTasks = function(){
-    const listContainer = document.getElementById('list-container');
-    const tasks = [];
+    /* Abrir/fechar menu */
 
-    listContainer.querySelectorAll('li').forEach((li) => {
-        tasks.push(li.textContent);
-    })
-}
-
-    if (task.length > 0){
-        fetch('save_tasks.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type':'application/json'
-            },
-            body: JSON.stringify({ tasks: tasks })
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success){
-                alert('Tarefas salvas com sucesso!');
-            } else {
-                alert('Não há tarefas para salvar.');
-            }
-        })
-    }
-
-function openNav(){
+function openNav(open){
     document.getElementById("sidebar").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 
 function closeNav(){
     document.getElementById("sidebar").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
+    document.body.style.background = "white";
+    document.getElementById('openButton').style.display ='block';
 }
