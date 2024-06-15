@@ -5,6 +5,8 @@
     box-sizing: border-box;
 }
 
+/* Barra lateral do Menu */
+
 .sidebar{
     height: 100%;
     width: 0;
@@ -18,7 +20,7 @@
     padding-top: 60px;
 }
 
-.sidebar a {
+.sidebar a{    
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
@@ -66,6 +68,7 @@
     transition: margin-left .5s;
     padding: 16px;
 }
+
 .container{
     width: 100%;
     min-height: 100vh;
@@ -110,6 +113,9 @@
     background: transparent;
     padding: 10px;
 }
+
+    /* Botão de Save */
+
 .saveButton{
     border: none;
     outline: none;
@@ -126,6 +132,8 @@
     background-color: black;
     color: white;
 }
+
+    /* Botão de adicionar tarefa */
 
 .addButton{
     border: none;
@@ -149,6 +157,9 @@
     background-color: black;
     color:white;
 }
+
+    /* Lista de Tarefas */
+
 ul li{
     list-style: none;
     font-size: 17px;
@@ -158,13 +169,11 @@ ul li{
     position: relative;
 }
 
-ul li::before{
-    content:'';
+ul li .check-icon{
     position: absolute;
     height: 28px;
     width: 28px;
     border-radius: 50%;
-    background-image: url(images/unchecked.png);
     background-size: cover;
     background-position: center;
     top: 12px;
@@ -176,9 +185,6 @@ ul li.checked{
     text-decoration: line-through;
 }
 
-ul li.checked::before{
-    background-image: url(images/checked.png);
-}
 
 ul li span{
     position: absolute;
