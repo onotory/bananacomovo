@@ -50,17 +50,10 @@ document.addEventListener('DOMContentLoaded', (Event) => {
     }
 })
 
-    /* Abrir/fechar menu */
+let scrollPosition = 0;
 
-function openNav(open){
-    document.getElementById("sidebar").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-}
-
-function closeNav(){
+function openNav(){
+    scrollPosition = window.scrollY;
     document.getElementById("sidebar").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
-    document.body.style.background = "white";
-    document.getElementById('openButton').style.display ='block';
+    window.scrollTo(0, scrollPosition);
 }

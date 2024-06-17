@@ -5,7 +5,82 @@
     box-sizing: border-box;
 }
 
-/* Barra lateral do Menu */
+
+.openbtn:hover{
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;;
+}
+
+.openbtn {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 15px;
+   }
+   
+    .openbtn {
+    font-weight: 600;
+    color: black;
+    text-transform: uppercase;
+    padding: 1.25em 2em;
+    background: rgb(189, 122, 255)    ;
+    border: 2px solid black;
+    border-radius: 0.75em;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+   }
+   
+   .openbtn::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #8254de;
+    border-radius: inherit;
+    -webkit-box-shadow: 0 0 0 2px green, 0 0.625em 0 0 green;
+    box-shadow: 0 0 0 2px black, 0 0.625em 0 0 #342259;
+    -webkit-transform: translate3d(0, 0.75em, -1em);
+    transform: translate3d(0, 0.75em, -1em);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+   }
+   
+   button.openbtn:hover {
+    background: white;
+    -webkit-transform: translate(0, 0.25em);
+    transform: translate(0, 0.25em);
+   }
+   
+   button.openbtn:hover::before {
+    -webkit-box-shadow: 0 0 0 2px green, 0 0.5em 0 0 green;
+    box-shadow: 0 0 0 2px black, 0 0.5em 0 0 #342259;
+    -webkit-transform: translate3d(0, 0.5em, -1em);
+    transform: translate3d(0, 0.5em, -1em);
+   }
+   
+   button.openbtn:active {
+    background: white;
+    -webkit-transform: translate(0em, 0.75em);
+    transform: translate(0em, 0.75em);
+   }
+   
+   button.openbtn:active::before {
+    -webkit-box-shadow: 0 0 0 2px green, 0 0 green;
+    box-shadow: 0 0 0 2px black, 0 0 black;
+    -webkit-transform: translate3d(0, 0, -1em);
+    transform: translate3d(0, 0, -1em);
+   }
 
 .sidebar{
     height: 100%;
@@ -20,20 +95,16 @@
     padding-top: 60px;
 }
 
-.sidebar a{    
+.sidebar a{
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: white;
+    color: #818181;
     display: block;
     transition: 0.3s;
 }
 
-.sidebar a:hover{
-    color: red;
-}
-
-.sidebar #closebtn{
+#closebtn{
     position: absolute;
     top: 0;
     right: 25px;
@@ -41,38 +112,10 @@
     margin-left: 50px;
 }
 
-.openbtn{
-    border: none;
-    outline: none;
-    padding: 10px 15px;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 10px;
-    background-color: rgb(245, 0, 0);
-}
-
-.openbtn:hover{
-    border: none;
-    outline: none;
-    padding: 10px 15px;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 10px;
-    background-color: rgb(0, 0, 0);
-    color:white;
-}
-
-#main {
-    transition: margin-left .5s;
-    padding: 16px;
-}
-
 .container{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg, red, black);
+    background: #925cff;
     padding: 10px;
 }
 
@@ -102,11 +145,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: lightgray ;
     border-radius: 30px;
     padding-left: 20px;
     margin-bottom: 25px;
-} input{
+} 
+
+input{
     flex: 1;
     border: none;
     outline: none;
@@ -114,36 +158,105 @@
     padding: 10px;
 }
 
-    /* Botão de Save */
+    /* Botão de salvar tarefas */
 
 .saveButton{
-    border: none;
+    border-color: black;
     outline: none;
     padding: 15px 20px;
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
     border-radius: 10%;
-    background-color: red;
+    background-color: rgb(189, 122, 255);
     float: right;
 }
 
 .saveButton:hover{
-    background-color: black;
-    color: white;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
 }
-
-    /* Botão de adicionar tarefa */
-
+    
+.saveButton {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 10px;
+}
+       
+.saveButton{
+    font-weight: 600;
+    color: black;
+    text-transform: uppercase;
+    padding: 1.25em 2em;
+    background: rgb(189, 122, 255)    ;
+    border: 2px solid black;
+    border-radius: 0.75em;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+       
+.saveButton::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #8254de;
+    border-radius: inherit;
+    -webkit-box-shadow: 0 0 0 2px green, 0 0.625em 0 0 green;
+    box-shadow: 0 0 0 2px black, 0 0.625em 0 0 #342259;
+    -webkit-transform: translate3d(0, 0.75em, -1em);
+    transform: translate3d(0, 0.75em, -1em);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+       
+button.saveButton:hover{
+    background: white;
+    -webkit-transform: translate(0, 0.25em);
+    transform: translate(0, 0.25em);
+}
+       
+button.saveButton:hover::before{
+    -webkit-box-shadow: 0 0 0 2px green, 0 0.5em 0 0 green;
+    box-shadow: 0 0 0 2px black, 0 0.5em 0 0 #342259;
+    -webkit-transform: translate3d(0, 0.5em, -1em);
+    transform: translate3d(0, 0.5em, -1em);
+}
+       
+    button.saveButton:active{
+    background: white;
+    -webkit-transform: translate(0em, 0.75em);
+    transform: translate(0em, 0.75em);
+}
+       
+button.saveButton:active::before{
+    -webkit-box-shadow: 0 0 0 2px green, 0 0 green;
+    box-shadow: 0 0 0 2px black, 0 0 black;
+    -webkit-transform: translate3d(0, 0, -1em);
+    transform: translate3d(0, 0, -1em);
+}
+    
 .addButton{
     border: none;
     outline: none;
     padding: 15px 20px;
-    font-size: 17px;
     font-weight: bold;
+    font-size: 17px;
     cursor: pointer;
     border-radius: 100%;
-    background-color: red;
+    background-color: rgb(189, 122, 255);
 }
 
 .addButton:hover{
@@ -154,8 +267,8 @@
     font-weight: bold;
     cursor: pointer;
     border-radius: 100%;
-    background-color: black;
-    color:white;
+    background-color: white;
+    color: rgb(189, 122, 255);
 }
 
     /* Lista de Tarefas */
