@@ -1,8 +1,10 @@
-    /* Declaração de constantes */
+
+/* Declaração de constantes */
 
 const inputBox = document.getElementById("input-box")
 const listContainer = document.getElementById("list-container")
 const task = inputBox.value;
+
 
     /* Botão adicionar tarefas*/
 
@@ -50,10 +52,41 @@ document.addEventListener('DOMContentLoaded', (Event) => {
     }
 })
 
-let scrollPosition = 0;
+    /*  Botão de abrir menu lateral */
 
 function openNav(){
-    scrollPosition = window.scrollY;
+    ScrollPosition = window.scrollY;
+    document.getElementById("sidebar").style.width = "250px";
+}
+
+function closeNav(){
     document.getElementById("sidebar").style.width = "0";
-    window.scrollTo(0, scrollPosition);
+    document.body.style.position = '';
+    document.body.style.top = '';
+    window.scrollTo(0, ScrollPosition);
+}
+let ScrollPosition = 0;
+
+document.getElementById("openbtn").addEventListener("click", openNav);
+document.getElementById("closebtn"),addEventListener("click", closeNav);
+
+    /* Salvar */
+
+function saveTasks(){
+    const tasks = [];
+    const listContainer = document.getElementById("list-container");
+    const taskItems = listContainer.querySelectorAll("li");
+}
+
+taskItems.forEach(item => {
+    const checkbox = item.querySelector(".task-chechbox");
+    tasks.push({text: item.textContent.trim(), completed: checkbox.checked});
+});
+
+localStorage.setItem("tasks", JSON.stringify(tasks));
+alert("Tarefas salvas com sucesso!");
+
+function loadTasks(){
+    const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    const listContainer = document.getElementById
 }
