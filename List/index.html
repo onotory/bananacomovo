@@ -7,14 +7,16 @@
 </head>
 <body>
     <div id="sidebar" class="sidebar">
-        <a href="#" id="closebtn" onclick= "CloseNav()">&times;</a>
-        <a href="#">Início</a>
+        <a href="#" id="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Lista</a>
         <a href="#">Configurações</a>
     </div>
+    <div id="topMenu"></div>
     <div class="container">
-        <button class="openbtn" onclick="openNav()">☰ </button>
+        <button class="openbtn" onclick="openNav()">  ☰ </button>
+        <button class="saveButtonTopCorner" name="saveButtonTopCorner"> Save </button>
     <div class="todo-app">
-        <h2>Lista de Tarefas <img src="images/icon.png"><button class="saveButton">Salvar </button></h2>
+        <h2>Lista de Tarefas <img src="images/icon.png"><button class="deleteTasks"> Apagar </button></h2>
     <div class="row">
         <input type="text" id="input-box" placeholder="Digite sua tarefa aqui!">
         <button class="addButton"onclick="addTask()">+</button>
